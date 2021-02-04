@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![smita-hub](https://circleci.com/gh/smita-hub/devops.svg?style=svg)](https://circleci.com/gh/smita-hub/devops)
 
 ## Project Overview
 
