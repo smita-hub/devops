@@ -10,7 +10,7 @@ Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
 
-=========================================
+=========================================output from make prediction terminal =================================
 
 ec2-user:~/environment/devops/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh
 Port: 8000
