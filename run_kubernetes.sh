@@ -1,25 +1,12 @@
 #!/usr/bin/env bash
+myrepo="smita0208/machine-learning-model"
 
-# This tags and uploads an image to Docker Hub
+kubectl run machine-learning-model\
+    --image=$myrepo\
+    --port=80 --labels app=machine-learning-model
 
-# Step 1:
-# This is your Docker ID/path
-# dockerpath=<>
-dockerpath="smita0208/smita-flask-app"
+#kubectl get pods
+# List pods Sorted by Restart Count
+kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'
 
-# Step 2
-# Run the Docker Hub container with kubernetes
-kubectl run smita-flask-app\
-    --generator=run-pod/v1\
-    --image=$dockerpath\
-    --port=80 --labels app=smita-flask-app
-
-
-# Step 3:
-# List kubernetes pods
-kubectl get pods
-
-# Step 4:
-# Forward the container port to a host
-kubectl port-forward smita-flask-app 8000:80
-
+kubectl port-forward machine-learning-model 8000:80

@@ -1,19 +1,9 @@
 #!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
 
-# Assumes that an image is built via `run_docker.sh`
+myrepo="smita0208/machine-learning-model"
 
-# Step 1:
-# Create dockerpath
-# dockerpath=<your docker ID/path>
-dockerpath="smita0208/smita-flask-app"
+echo "Docker ID and Image: $myrepo"
+cat ~/my_credential.txt | docker login --username smita0208 --password-stdin &&\
+    docker image tag machine-learning-model $myrepo
 
-# Step 2:  
-# Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
-docker login &&\
-    docker image tag smita-flask-app $dockerpath
-
-# Step 3:
-# Push image to a docker repository
-docker push $dockerpath
+docker push $myrepo
