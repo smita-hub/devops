@@ -1,13 +1,16 @@
 (.devops) ec2-user:~/environment/devops (master) $ kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
 machine-learning-model   1/1     Running   0          34s
-(.devops) ec2-user:~/environment/devops (master) $ ./run_kubernetes.sh
+(.devops) ec2-user:~/environment/devops (master) $ ./run_kubernetes.sh 
 Error from server (AlreadyExists): pods "machine-learning-model" already exists
 NAME                     READY   STATUS    RESTARTS   AGE
-machine-learning-model   1/1     Running   0          45s
+machine-learning-model   1/1     Running   1          13h
+NAME                     READY   STATUS    RESTARTS   AGE
+machine-learning-model   1/1     Running   1          13h
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
+
 
 =========================================output from make prediction terminal =================================
 

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-docker build --tag=machine-learning-model .
+
+##@@ echo "Loading my.profile"
+# Load my.profile to export the application related variables
+. /home/ec2-user/environment/devops/my.profile
+
+docker build --tag=$myapp_name .
 docker image ls -a
-docker run -p 8000:80 machine-learning-model
+docker run -p $Port1:80 $myapp_name

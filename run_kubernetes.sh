@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
-myrepo="smita0208/machine-learning-model"
 
-kubectl run machine-learning-model\
-    --image=$myrepo\
-    --port=80 --labels app=machine-learning-model
+##@@ echo "Loading my.profile and shortcut.sh"
+# Task1: Load my.profile to export application related variables like dockerid , app name ,port etc.
+. /home/ec2-user/environment/devops/my.profile
+. /home/ec2-user/environment/devops/shortcut.sh
 
-#kubectl get pods
-# List pods Sorted by Restart Count
-kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'
+# Task2: Run pod using the alias created in shortcut.sh
+podrun
 
-kubectl port-forward machine-learning-model 8000:80
+#Task3.a: List pods using the alias created in shortcut.sh
+podinfo
+# Task3.b List pods Sorted by Restart Count using the alias created in shortcut.sh
+poddetail
+
+#Task 4 :Forward ports to the host using the alias created in shortcut.sh
+portforward
