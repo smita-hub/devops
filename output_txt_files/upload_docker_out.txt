@@ -1,0 +1,21 @@
+(.devops) ec2-user:~/environment/devops (master) $ ./upload_docker.sh 
+Docker ID and Image: smita0208/machine-learning-model
+WARNING! Your password will be stored unencrypted in /home/ec2-user/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/smita0208/machine-learning-model]
+b539f41bdcd9: Layer already exists 
+9b461550eb41: Layer already exists 
+1f3c9b0da885: Layer already exists 
+799a7872c8c7: Layer already exists 
+715450468940: Layer already exists 
+c9d608035aef: Layer already exists 
+bb9c02680a15: Layer already exists 
+a637c551a0da: Layer already exists 
+2c8d31157b81: Layer already exists 
+7b76d801397d: Layer already exists 
+f32868cde90b: Layer already exists 
+0db06dff9d9a: Layer already exists 
+latest: digest: sha256:12e8f7b68ef1e054b853753e80204ea7f684e3a34fd96b60c0693a7e4b9539f3 size: 2851

@@ -1,0 +1,6 @@
+(.devops) ec2-user:~/environment/devops (master) $ make lint
+hadolint Dockerfile
+pylint --disable=R,C,W1203 app.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
